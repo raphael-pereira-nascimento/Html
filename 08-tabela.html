@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <haed>
+        <title>Tabelas em HTML</title>
+    </haed>
+    <body>
+        <h1>Exemplo de tabela em HTML</h1>
+
+        <table border="1">
+            <!-- Cabeçalho da tabela -->
+             <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Total</th>
+                </tr>
+             </thead>
+             <!-- Corpo da tabela -->
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Notebook</td>
+                    <td>2</td>
+                    <td>R$ 3.500,00</td>
+                    <td>R$ 7.000,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Smartphone</td>
+                    <td>5</td>
+                    <td>R$ 1.200,00</td>
+                    <td>R$ 6.000,00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mouse</td>
+                    <td>10</td>
+                    <td>R$ 50,00</td>
+                    <td>R$ 500,00</td>
+                </tr>
+            </tbody>
+            <!--Rodapé da tabela -->
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total Geral</td>
+                    <td>R$ 13.500,00</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Nova Tabela com Linhas e colunas mesclada --> 
+        <table border="1">
+            <thead>
+                <try>
+                    <th rowspan="2">ID</th>
+                    <th rowspan="2">Produtos</th>
+                    <th colspan="2">Detalhes do Produto</th>
+                    <th rowspan="2">Total</th>
+                </try>
+                <tr>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pneu</td>
+                    <Td>5</Td>
+                    <td>R$ 100,00</td>
+                    <td>R$ 500,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Farol</td>
+                    <Td>10</Td>
+                    <td>R$ 200,00</td>
+                    <td>R$ 2.000,00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Escapamento</td>
+                    <Td>2</Td>
+                    <td>R$ 600,00</td>
+                    <td>R$ 1.200,00</td>
+                </tr>
+            </tbody>
+            <!-- Rodapé de Tabela -->
+             <tfoot>
+                <tr>
+                    <td colspan="4">Total Geral</td>
+                    <td>R$ 3.700,00</td>
+                </tr>
+             </tfoot>
+        </table>
+    </body>
+</html>
