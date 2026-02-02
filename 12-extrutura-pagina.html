@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica Express - Sua Oficina de Confiança</title>
+    
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ====== RESET BÁSICO ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f0f0f0;
+        }
+
+        /* ====== CABEÇALHO COM LOGO E MENU ====== */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        nav a.btn {
+            background: #ffd700;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+
+        /* ====== CONTEÚDO PRINCIPAL ====== */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin: 2rem 0 1rem;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        /* ====== IMAGEM ====== */
+        .image-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 5px solid white;
+        }
+
+        /* ====== SEÇÃO DE SERVIÇOS ====== */
+        .services-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 2px solid #e9ecef;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffd700;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1e3c72;
+            margin: 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* ====== SEÇÃO SOBRE ====== */
+        .about-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ====== SEÇÃO CONTATO ====== */
+        .contact-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .contact-item i {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* ====== RODAPÉ ====== */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .footer-links a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* ====== RESPONSIVO ====== */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ====== CABEÇALHO ====== -->
+    <header>
+        <a href="#" class="logo">
+            <i class="fas fa-wrench"></i>
+            MECÂNICA <span>EXPRESS</span>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="#servicos"><i class="fas fa-tools"></i> Serviços</a></li>
+                <li><a href="#contato"><i class="fas fa-phone"></i> Contato</a></li>
+                <li><a href="#entrar" class="btn"><i class="fas fa-sign-in-alt"></i> Entrar</a></li>
+                <li><a href="#cadastro" class="btn"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main>
+        
+        <!-- SEÇÃO INÍCIO -->
+        <section id="inicio" class="hero">
+            <h1>🔧 Mecânica Express</h1>
+            <p class="subtitle">Sua oficina de confiança para manutenção completa do seu veículo</p>
+            
+            <div class="image-container">
+                <img src="https://via.placeholder.com/800x400/1e3c72/ffffff?text=OFICINA+MECÂNICA" alt="Oficina Mecânica">
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="about-section">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3><i class="fas fa-info-circle"></i> Sobre Nossa Oficina</h3>
+                    <p>
+                        A <strong>Mecânica Express</strong> atua no mercado há mais de 10 anos, oferecendo serviços 
+                        de qualidade com profissionais qualificados e equipamentos modernos.
+                    </p>
+                    <p>
+                        Nossa missão é garantir a segurança e o melhor desempenho do seu veículo, 
+                        com transparência, agilidade e preços justos.
+                    </p>
+                    <p>
+                        Trabalhamos com carros nacionais e importados, oferecendo diagnóstico 
+                        computadorizado, manutenção preventiva e corretiva.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x400/2a5298/ffffff?text=NOSSA+EQUIPE" alt="Nossa Equipe">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SERVIÇOS -->
+        <section id="servicos" class="services-section">
+            <h2><i class="fas fa-tools"></i> Nossos Serviços</h2>
+            <p style="text-align: center; color: #666;">
+                Confira os principais serviços que oferecemos para o seu veículo:
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-oil-can"></i>
+                    <h3>Troca de Óleo</h3>
+                    <p>Troca de óleo e filtro com produtos de alta qualidade para garantir o melhor desempenho do motor.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Alinhamento e Balanceamento</h3>
+                    <p>Alinhamento e balanceamento computadorizado para maior estabilidade e segurança nas estradas.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Elétrica e Bateria</h3>
+                    <p>Diagnóstico e reparo de sistemas elétricos, troca de baterias e instalação de acessórios.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Mecânica Geral</h3>
+                    <p>Manutenção completa do motor, câmbio, freios, suspensão e sistema de arrefecimento.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-tire-pressure-warning"></i>
+                    <h3>Troca de Pneus</h3>
+                    <p>Venda e instalação de pneus de todas as marcas, com garantia e melhor custo-benefício.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Revisão Completa</h3>
+                    <p>Revisão preventiva completa para garantir a segurança e prolongar a vida útil do seu veículo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato" class="contact-section">
+            <h2><i class="fas fa-phone"></i> Entre em Contato</h2>
+            <p style="text-align: center; color: #666;">
+                Fale conosco e agende seu horário!
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Endereço</h4>
+                    <p>Rua das Oficinas, 123<br>São Paulo - SP<br>CEP: 01234-567</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Telefone</h4>
+                    <p>(11) 3456-7890<br>(11) 98765-4321</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>Horário de Atendimento</h4>
+                    <p>Segunda a Sexta<br>8:00 às 18:00<br>Sábado: 8:00 às 12:00</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>contato@</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== RODAPÉ ====== -->
+    <footer>
+        <p>© 2026 Mecânica Express. Todos os direitos reservados.</p>
+        
+        <div class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            <a href="#">Política de Privacidade</a>
+        </div>
+        
+        <p class="copyright">
+            Desenvolvido com ❤️ para sua oficina mecânica
+        </p>
+    </footer>
+
+</body>
+</html>
