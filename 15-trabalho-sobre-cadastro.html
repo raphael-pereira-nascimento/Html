@@ -3,80 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário</title>
+    <title>FitLite Academy</title>
 </head>
-<header>
 <body>
-    <h1>FitLite Academy</h1>
-    <nav>Modalidade</nav>
-    <nav>Horários</nav>
-    <nav>Matrícula</nav>
-    <nav>Contato</nav>
-</body>
-</header>
-<main>
-    <h2>Modalidade</h2>
-    <section>A FitLite Academy é uma academia que está de braços abertos para nossos clientes que estão intereçados em serem sáudaveis em nosso estabelecimento.</section>
-    <section>Nós oferecemos servimos para nossos clientes serviços de ponta de máxima qualidade.</section>
-    <section>Por isso,venha para a FitLite Academy,você nunca saira insatisfeito daqui.</section>
-</main>
-    <ul><strong>Musculação</strong></ul>
-    <em>  Umas das opções para quem quer exercicios mais brutos e fortes,é a opção perfeita para ganhar musculos e manter a saude em dia</em>
-    <ul><strong>CrossFit</strong></ul>
-    <em>  Uma opção de exercicios que combina suavidade e musculação leve,é a opção perfeita para aqueles que uma opção leve e saudavel </em>
-    <ul><strong>Yoga</strong></ul>
-    <em>  Uma opção totalmente focada no relaxamento muscular sem movimentos bruscos e somente moviemntos suaves</em>
+    
+    <!-- Cabeçalho -->
+    <header>
+        <h1>FitLite Academy</h1>
+        <nav>
+            <a href="#modalidade">Modalidade</a> |
+            <a href="#horarios">Horários</a> |
+            <a href="#matricula">Matrícula</a> |
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-    <h2>Horários da Semana</h2>
-<tbody>
-    <table border="1">
-        <THead>
-            <tr>
-                <th>Horário</th>
-                <th>Segunda</th>
-                <th>Quarta</th>
-                <th>Sexta</th>
-            </tr>
-        </THead>
-        <tbody>
-            <tr>
-                <td>7:30 até 9:00</td>
-                <td>CrossFit</td>
-                <td>CrossFit</td>
-                <td>CrossFit</td>
-            </tr>
-            <tr>
-                <td>9:00 até 12:30</td>
-                <td>Yoga</td>
-                <td>Yoga</td>
-                <td>Yoga</td>
-            </tr>
-            <tr>
-                <td>13:00 até 14:30</td>
-                <td>Yoga</td>
-                <td>Yoga</td>
-                <td>Yoga</td>
-            </tr>
-            <tr>
-                <td>14:30 até 17:00</td>
-                <td>Musculação</td>
-                <td>Musculação</td>
-                <td>Musculação</td>
-                <tfoot>Sujeito a lotação máxima</tfoot>
-            </tr>
-        </tbody>
-    </table>
-    <h2>Pré-Matricula</h2>
-    <form action="Post"></form>
-    <label for="texto">Nome completo</label>
-    <label for="Tipo email">E-mail</label>
-    <label for="">Data de Nascimento</label>
-    <label for="">Plano de Interesse</label>
-    <select name="Mensal" id="">Mensal</select>
-    <select name="Trimestral" id="">Trimestral</select>
-    <select name="Anual" id="">Anual</select>
-    <textarea name="Objetivo" id=""></textarea>
-    <button>Limpar</button>
-    <button>Enviar</button>
+    <hr>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h2 id="modalidade">Modalidade</h2>
+        <section>
+            <p>A FitLite Academy é uma academia que está de braços abertos para nossos clientes que estão interessados em serem saudáveis em nosso estabelecimento.</p>
+            <p>Nós oferecemos serviços para nossos clientes serviços de ponta de máxima qualidade.</p>
+            <p>Por isso, venha para a FitLite Academy, você nunca sairá insatisfeito daqui.</p>
+        </section>
+
+        <h3>Musculação</h3>
+        <p>Uma das opções para quem quer exercícios mais brutos e fortes, é a opção perfeita para ganhar músculos e manter a saúde em dia.</p>
+
+        <h3>CrossFit</h3>
+        <p>Uma opção de exercícios que combina suavidade e musculação leve, é a opção perfeita para aqueles que buscam uma opção leve e saudável.</p>
+
+        <h3>Yoga</h3>
+        <p>Uma opção totalmente focada no relaxamento muscular sem movimentos bruscos e somente movimentos suaves.</p>
+
+        <hr>
+
+        <h2 id="horarios">Horários da Semana</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Segunda</th>
+                    <th>Quarta</th>
+                    <th>Sexta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7:30 até 9:00</td>
+                    <td>CrossFit</td>
+                    <td>CrossFit</td>
+                    <td>CrossFit</td>
+                </tr>
+                <tr>
+                    <td>9:00 até 12:30</td>
+                    <td>Yoga</td>
+                    <td>Yoga</td>
+                    <td>Yoga</td>
+                </tr>
+                <tr>
+                    <td>13:00 até 14:30</td>
+                    <td>Yoga</td>
+                    <td>Yoga</td>
+                    <td>Yoga</td>
+                </tr>
+                <tr>
+                    <td>14:30 até 17:00</td>
+                    <td>Musculação</td>
+                    <td>Musculação</td>
+                    <td>Musculação</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Sujeito a lotação máxima</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr>
+
+        <h2 id="matricula">Pré-Matrícula</h2>
+        <form action="#" method="post">
+            <p>
+                <label for="nome">Nome completo:</label><br>
+                <input type="text" id="nome" name="nome" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="nascimento">Data de Nascimento:</label><br>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </p>
+
+            <p>
+                <label for="plano">Plano de Interesse:</label><br>
+                <select id="plano" name="plano" required>
+                    <option value="">Selecione um plano</option>
+                    <option value="mensal">Mensal</option>
+                    <option value="trimestral">Trimestral</option>
+                    <option value="anual">Anual</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="objetivo">Objetivo:</label><br>
+                <textarea id="objetivo" name="objetivo" rows="4" cols="50" placeholder="Descreva seus objetivos..."></textarea>
+            </p>
+
+            <p>
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </p>
+        </form>
+    </main>
+
+    <hr>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <h2>Contato</h2>
+        
+        <h3>Redes Sociais</h3>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+
+        <h3>Email</h3>
+        <p>
+            <a href="mailto:contato@fitliteacademy.com">contato@fitliteacademy.com</a>
+        </p>
+
+        <hr>
+
+        <p>&copy; 2026 FitLite Academy. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
